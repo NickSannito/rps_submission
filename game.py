@@ -3,7 +3,10 @@
 # ... https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/README.md
 #import os
 
-def determine_winner(choice_1, choice_2):
+from pickle import NONE
+
+
+def determine_winner(user_choice, computer_choice):
     """
     Determines the winning choice between two valid choices from selectable options: "rock", "paper", or "scissors".
 
@@ -12,7 +15,20 @@ def determine_winner(choice_1, choice_2):
     Example: determine_winner("rock", "paper")
     """
     
-    winner = "rock"
+    if user_choice == computer_choice: 
+        winner = None
+    elif user_choice == "rock" and computer_choice == "paper":
+        winner = computer_choice 
+    elif user_choice == "rock" and computer_choice == "scissors": 
+        winner = user_choice
+    elif user_choice == "paper" and computer_choice == "rock":
+        winner = user_choice 
+    elif user_choice == "paper" and computer_choice == "scissors": 
+        winner = computer_choice
+    elif user_choice == "scissors" and computer_choice == "rock":
+        winner = computer_choice 
+    elif user_choice == "scissors" and computer_choice == "paper": 
+        winner = user_choice
 
     return winner
 
@@ -38,6 +54,8 @@ if __name__ == "__main__":
     from random import choice
     computer_options = ["rock", "paper", "scissors"] 
     computer_play = choice(computer_options)
+    
+    print("The computer chose" + computer_play)
 
     #determine winner
     winner = determine_winner(user_play, computer_play);
@@ -46,5 +64,11 @@ if __name__ == "__main__":
 
     # TO DO FROM INSTRUCTIONS ON GITBHUB
 
-    print("Rock won! Driver function. Change later.")
+    if winner == user_play: 
+        print("congratulations! you won")
+    elif winner == computer_play:
+        print("Sorry, better luck next time.")
+    else: 
+        print("It's a tie!")
+
 
