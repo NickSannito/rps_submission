@@ -30,6 +30,15 @@ Run the rock paper scissors game:
 python game.py
 ```
 
+Run the game with a custom user name: 
+
+```sh
+PLAYER_NAME="Anything you want your name to be between the quotes!" python game.py
+```
+
+General Gameplay: 
+Once you've started the game, simply follow the instructions, typing either 'rock', 'paper', or 'scissors' to play against a randomly generated choice from the computer. Capitalization should not matter when you type your play!
+
 ## Testing
 
 Run tests:
