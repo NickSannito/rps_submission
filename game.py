@@ -1,9 +1,11 @@
 #
 # todo: write some Python code here to satisfy the exercise objectives
 # ... https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/README.md
-#import os
+
+#worked with Krish Sarawgi, consulted stackoverflow.com
 
 from pickle import NONE
+
 
 
 #create determine_winner function
@@ -49,7 +51,7 @@ if __name__ == "__main__":
 
         #confirm the user made a valid selection 
     if user_play != "rock" and user_play != "paper" and user_play != "scissors": 
-            print("Next time, select either 'rock', 'paper', or 'scissors'. Run the program again to give it another try") 
+            print("Next time, select either 'rock', 'paper', or 'scissors'. Run the program again to give it another try.") 
             quit()
     else: 
             print("Inspiring choice " + user_name + ", you played " +  user_play + ".")
