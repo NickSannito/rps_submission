@@ -50,6 +50,7 @@ if __name__ == "__main__":
     user_play = user_play.lower()
 
         #confirm the user made a valid selection 
+    print()
     if user_play != "rock" and user_play != "paper" and user_play != "scissors": 
             print("Next time, select either 'rock', 'paper', or 'scissors'. Run the program again to give it another try.") 
             quit()
@@ -61,7 +62,9 @@ if __name__ == "__main__":
     computer_options = ["rock", "paper", "scissors"] 
     computer_play = choice(computer_options)
         
+    print()
     print("What did the computer go with? Looks like..." + computer_play + "!")
+    print()
 
     #determine winner
     winner = determine_winner(user_play, computer_play)
@@ -70,12 +73,19 @@ if __name__ == "__main__":
 
     if winner == user_play: 
             print("Well played, " + user_name + ", well played indeed.")
+            print()
+            print("Thanks for playing!")
             quit()
     elif winner == computer_play:
             print("Well it seems the computer got the best of you this time. Run the program again to give it another shot.")
+            print()
+            print("Thanks for playing!")
             quit()
     else: 
             print("It's a tie! Run the program again for some overtime!")
+            print()
+            print("Thanks for playing!")
             quit()
+    
 
 
